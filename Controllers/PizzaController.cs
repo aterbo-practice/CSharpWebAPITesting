@@ -35,7 +35,7 @@ namespace MSLearnWebAPI.Controllers
             return CreatedAtAction(nameof(Create), new { id = pizza.Id }, pizza);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Update(int id, Pizza pizza)
         {
             if (id != pizza.Id)
